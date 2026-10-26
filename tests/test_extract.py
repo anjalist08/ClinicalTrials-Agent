@@ -50,6 +50,9 @@ def test_drug_name_normaliser_cases():
     assert ex.drug_names("Carboplatin AUC 5") == [("carboplatin", "Carboplatin")]
     assert ex.drug_names("Gemcitabine and Cisplatin") == [("gemcitabine", "Gemcitabine"), ("cisplatin", "Cisplatin")]
     assert ex.drug_names("Saline placebo") == []
+    assert ex.drug_names("Gemcitabine Hydrochloride") == [("gemcitabine", "Gemcitabine")]
+    assert ex.drug_names("Leucovorin calcium") == [("leucovorin", "Leucovorin")]
+    assert ex.drug_names("Nab-paclitaxel")[0][0] == ex.drug_names("nab paclitaxel")[0][0] == "nab paclitaxel"
 
 
 def test_time_buckets_respect_date_precision():

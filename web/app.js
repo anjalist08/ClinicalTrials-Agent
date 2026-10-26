@@ -54,7 +54,10 @@
     if (!datum) return;
     // describe the datum with the encoded fields only (renderers may add internal fields)
     const seen = new Set();
-    const fields = Object.values(currentEncoding).filter((ch) => !seen.has(ch.field) && seen.add(ch.field));
+    const fields = Object.entries(currentEncoding)
+      .filter(([name]) => !(currentEncoding.x2 && (name === "x" || name === "x2"))) // histograms: the bin label says it
+      .map(([, ch]) => ch)
+      .filter((ch) => !seen.has(ch.field) && seen.add(ch.field));
     const label = fields
       .filter((ch) => datum[ch.field] !== undefined && datum[ch.field] !== null && typeof datum[ch.field] !== "object")
       .map((ch) => `${esc(ch.title)}: <b>${esc(ch.type === "temporal" && typeof datum.period === "string" ? datum.period : datum[ch.field])}</b>`)

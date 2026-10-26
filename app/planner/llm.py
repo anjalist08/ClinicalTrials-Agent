@@ -83,6 +83,10 @@ FILTERS - strict rules:
 - If the user's structured fields (given below) cover an entity, refer to it implicitly - e.g. "this drug"
   - and do NOT duplicate it into filters; the service applies structured fields itself.
 - A dimension word that defines the breakdown ("by phase") is NOT a filter.
+- "Combination studies/therapy" means trials testing several drugs together: answer with a drug-drug
+  co-occurrence network. It is NOT a filter value and NOT the COMBINATION_PRODUCT intervention type
+  (a regulatory product category, only when the user literally says "combination product").
+- Never use generic words ("drugs", "trials", "therapy", "combination") as filter values.
 
 Write `interpretation` as one plain sentence. List any judgement calls in `assumptions`.
 If the question is ambiguous, prefer the simplest analysis that answers it. Leave unused fields null.

@@ -162,6 +162,12 @@ _FORM = re.compile(
     r"s\.c\.|solution|for injection|cream|gel)\b",
     re.I,
 )
+# salt forms name the same active moiety ("gemcitabine hydrochloride" == "gemcitabine")
+_SALT = re.compile(
+    r"\s+(?:hydrochloride|hcl|sodium|potassium|calcium|mesylate|sulfate|sulphate|citrate|acetate|phosphate|"
+    r"tartrate|maleate|besylate|tosylate|fumarate|succinate|bromide|disodium|dihydrochloride)$",
+    re.I,
+)
 NON_DRUG = re.compile(
     r"\b(?:placebos?|saline|vehicle|sham|standard of care|best supportive care|usual care|no intervention)\b",
     re.I,
@@ -183,10 +189,12 @@ def drug_names(raw: str) -> list[tuple[str, str]]:
         s = re.sub(r"\s+AUC\s*\d.*$", "", s, flags=re.I)
         s = _FORM.sub("", s)
         s = re.sub(r"\s{2,}", " ", s).strip(" ,;:-/")
+        s = _SALT.sub("", s)
         if len(s) < 2 or NON_DRUG.search(s):
             continue
         label = s if not s.islower() else s.capitalize()
-        out.append((s.lower(), label))
+        # hyphen/space variants are the same name ("nab-paclitaxel" == "nab paclitaxel"); label keeps the source form
+        out.append((re.sub(r"[\s\-]+", " ", s.lower()), label))
     return out
 
 

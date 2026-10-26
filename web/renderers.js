@@ -96,7 +96,8 @@
         return {
           ...common,
           layer: [
-            { mark: { type: "line", interpolate: "monotone" }, encoding: { x: e.x, y: e.y, color: e.color } },
+            // projected (future) periods are drawn as faded points only, never joined by the line
+            { transform: [{ filter: "!datum.is_projected" }], mark: { type: "line", interpolate: "monotone" }, encoding: { x: e.x, y: e.y, color: e.color } },
             {
               mark: { type: "point", filled: true, size: 55, cursor: "pointer" },
               encoding: { ...e, opacity: { condition: { test: "datum.is_projected", value: 0.35 }, value: 1 } },
@@ -180,7 +181,7 @@
       color: colorOf(n[enc.node_color.field]),
       title: `${n[enc.node_label.field]} (${n[enc.node_color.field]}): ${n[enc.node_size.field]} trials`,
       shape: n[enc.node_color.field] === (enc.node_color.sort || [])[0] ? "dot" : "diamond",
-      font: { color: text, size: 13 },
+      font: { color: text, size: 22, strokeWidth: 4, strokeColor: cssVar("--card") },
     }));
     const visEdges = edges.map((e, i) => ({
       id: i,

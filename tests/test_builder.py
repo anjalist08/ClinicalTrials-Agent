@@ -125,3 +125,10 @@ def test_full_citation_mode_cites_every_contributor():
     res = run(P(analysis="distribution", dimension="country"), mode="full")
     for r in res.visualization.data:
         assert len(r["citations"]) == r["citation_count"] == r["trial_count"]
+
+
+def test_explicit_stacked_preference_beats_heatmap_heuristic():
+    plan = P(analysis="cross_tab", dimension="phase", series_dimension="country", chart_preference="stacked")
+    res = run(plan)
+    assert res.visualization.type == "stacked_bar_chart"
+    assert len(res.visualization.encoding["color"].sort) <= 8

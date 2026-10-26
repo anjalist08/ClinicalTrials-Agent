@@ -34,12 +34,32 @@ ENUM_CUES: dict[str, re.Pattern[str]] = {
         re.I,
     ),
     "study_type": re.compile(r"interventional|observational|expanded access|registry|cohort", re.I),
-    "intervention_types": re.compile(
-        r"drug|biolog|device|behavio|procedur|surg|radiat|radiother|vaccin|gene|genetic|dietary|supplement|diagnostic|combination product",
-        re.I,
-    ),
     "sponsor_classes": re.compile(r"industry|pharma|compan|nih|government|federal|academic|universit|network|individual|non-profit|sponsor (class|type|categor)", re.I),
     "years": re.compile(r"\b(19|20)\d{2}\b|last|past|recent|since|decade|years?\b|before|after", re.I),
+}
+
+
+# Each intervention type needs its own cue: "which drugs co-occur in combination studies" must not ground
+# COMBINATION_PRODUCT (a regulatory product category), only an explicit "combination product" does.
+INTERVENTION_TYPE_CUES: dict[str, re.Pattern[str]] = {
+    "DRUG": re.compile(r"\bdrugs?\b|medication|pharmacolog", re.I),
+    "BIOLOGICAL": re.compile(r"biolog|vaccin|antibod|cell therap|car-?t\b", re.I),
+    "DEVICE": re.compile(r"device", re.I),
+    "BEHAVIORAL": re.compile(r"behavio|lifestyle|exercise|counsel", re.I),
+    "PROCEDURE": re.compile(r"procedur|surg", re.I),
+    "RADIATION": re.compile(r"radiat|radiother", re.I),
+    "GENETIC": re.compile(r"gene\b|genetic|gene therap", re.I),
+    "DIETARY_SUPPLEMENT": re.compile(r"dietary|supplement|nutrition|vitamin", re.I),
+    "DIAGNOSTIC_TEST": re.compile(r"diagnostic", re.I),
+    "COMBINATION_PRODUCT": re.compile(r"combination products?", re.I),
+    "OTHER": re.compile(r"\bother intervention", re.I),
+}
+
+# Words that describe the question rather than name an entity; never valid as a search filter value.
+GENERIC_VALUES = {
+    "combination", "combinations", "combination therapy", "combination studies", "drug", "drugs", "trial",
+    "trials", "study", "studies", "treatment", "treatments", "therapy", "therapies", "intervention",
+    "interventions", "clinical trials", "sponsor", "sponsors", "condition", "conditions", "disease", "diseases",
 }
 
 
@@ -100,25 +120,49 @@ def _request_sources(req: QueryRequest) -> list[str]:
     return [v for v in vals if v]
 
 
-def _clean_filters(f: Filters, sources: list[str], query: str, where: str, warnings: list[str]) -> tuple[Filters, int]:
+def _clean_filters(
+    f: Filters, sources: list[str], query: str, where: str, warnings: list[str], req: QueryRequest
+) -> tuple[Filters, int]:
     data = f.model_dump()
     dropped = 0
     for key, value in f.text_items().items():
+        if _norm(value) in GENERIC_VALUES:
+            warnings.append(f"Dropped {where}filter {key}={value!r}: a generic word, not an entity to search for.")
+            data[key] = None
+            dropped += 1
+            continue
         ok = _country_grounded(value, sources) if key == "country" else is_grounded(value, sources)
         if not ok:
             warnings.append(f"Dropped {where}filter {key}={value!r}: it does not appear in the question.")
             data[key] = None
             dropped += 1
-    for key in ("phases", "statuses", "intervention_types", "sponsor_classes"):
+    # values supplied by structured request fields are grounded by definition (the request re-applies them anyway)
+    from_request = {
+        "phases": set(req.trial_phase or []),
+        "statuses": set(req.overall_status or []),
+        "intervention_types": set(req.intervention_type or []),
+        "sponsor_classes": set(req.sponsor_class or []),
+    }
+    if data["intervention_types"]:
+        kept = [t for t in data["intervention_types"] if t in from_request["intervention_types"] or INTERVENTION_TYPE_CUES[t].search(query)]
+        if kept != data["intervention_types"]:
+            removed = [t for t in data["intervention_types"] if t not in kept]
+            warnings.append(f"Dropped {where}filter intervention_types={removed}: the question does not mention them.")
+            data["intervention_types"] = kept
+            dropped += 1
+    for key in ("phases", "statuses", "sponsor_classes"):
+        if data[key] and set(data[key]) <= from_request[key]:
+            continue
         if data[key] and not ENUM_CUES[key].search(query):
             warnings.append(f"Dropped {where}filter {key}={data[key]}: the question does not mention it.")
             data[key] = []
             dropped += 1
-    if data["study_type"] and not ENUM_CUES["study_type"].search(query):
+    if data["study_type"] and data["study_type"] != req.study_type and not ENUM_CUES["study_type"].search(query):
         warnings.append(f"Dropped {where}filter study_type={data['study_type']}: the question does not mention it.")
         data["study_type"] = None
         dropped += 1
-    if (data["start_year_from"] or data["start_year_to"]) and not ENUM_CUES["years"].search(query):
+    years_from_request = (data["start_year_from"], data["start_year_to"]) == (req.start_year, req.end_year)
+    if (data["start_year_from"] or data["start_year_to"]) and not years_from_request and not ENUM_CUES["years"].search(query):
         warnings.append(f"Dropped {where}start-year filter: the question does not mention a time range.")
         data["start_year_from"] = data["start_year_to"] = None
         dropped += 1
@@ -129,10 +173,10 @@ def ground_plan(plan: QueryPlan, req: QueryRequest) -> tuple[QueryPlan, list[str
     """Remove ungrounded constraints. Run *before* request overrides are applied."""
     warnings: list[str] = []
     sources = _request_sources(req)
-    filters, _ = _clean_filters(plan.filters, sources, req.query, "", warnings)
+    filters, _ = _clean_filters(plan.filters, sources, req.query, "", warnings, req)
     groups = []
     for g in plan.groups:
-        gf, dropped = _clean_filters(g.filters, sources, req.query, f"group '{g.label}' ", warnings)
+        gf, dropped = _clean_filters(g.filters, sources, req.query, f"group '{g.label}' ", warnings, req)
         if dropped or gf.is_empty():
             continue
         groups.append(g.model_copy(update={"filters": gf}))

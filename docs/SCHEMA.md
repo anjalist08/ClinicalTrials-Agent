@@ -37,7 +37,7 @@ planner inferred from the text. Unknown fields are rejected (`422`).
 | `compare` | object | | | `{"field": "drug"\|"condition"\|"sponsor"\|"country"\|"term", "values": [2–6 distinct strings]}` | One dataset per value, rendered as series |
 | `visualization_type` | string | | | one of the [types](#per-type-contract) | Preference; honoured when compatible, otherwise a note explains why not |
 | `top_n` | int | | per dimension (15–30) | 1–100 | Max categories / nodes / rows |
-| `max_records` | int | | `MAX_RECORDS` env (1000) | 1–10000 | Records fetched **per dataset** |
+| `max_records` | int | | `MAX_RECORDS` env (5000) | 1–10000 | Records fetched **per dataset** |
 | `citation_mode` | string | | `summary` | `off \| summary \| full` | See [citations](#citations-deep-traceability) |
 | `max_citations_per_datum` | int | | 3 | 1–50 | Used in `summary` mode |
 | `planner` | string | | `auto` | `auto \| llm \| rules` | Force a planner (debug/eval) |

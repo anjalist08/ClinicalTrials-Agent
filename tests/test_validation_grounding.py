@@ -130,3 +130,32 @@ def test_compatible_visualization_type_sets_preference():
     req = QueryRequest(query="phase by status", visualization_type="heatmap")
     p, _ = apply_request_overrides(P(analysis="cross_tab", dimension="phase", series_dimension="overall_status"), req)
     assert p.chart_preference == "heatmap"
+
+
+def test_combination_studies_do_not_become_filters():
+    # seen with gpt-4.1-mini on live runs: "combination studies" -> intervention="combination" + COMBINATION_PRODUCT
+    req = QueryRequest(query="Which drugs frequently co-occur in combination studies for pancreatic cancer?")
+    plan = P(
+        analysis="network", network_source="drug", network_target="drug",
+        filters=Filters(condition="pancreatic cancer", intervention="combination", intervention_types=["COMBINATION_PRODUCT"]),
+    )
+    grounded, warnings = ground_plan(plan, req)
+    assert grounded.filters.condition == "pancreatic cancer"
+    assert grounded.filters.intervention is None and grounded.filters.intervention_types == []
+    assert len(warnings) == 2
+
+
+def test_intervention_types_need_their_own_cue():
+    req = QueryRequest(query="Which vaccine and device trials exist for flu?")
+    plan = P(analysis="total", filters=Filters(intervention_types=["BIOLOGICAL", "DEVICE", "DRUG"]))
+    grounded, _ = ground_plan(plan, req)
+    assert grounded.filters.intervention_types == ["BIOLOGICAL", "DEVICE"]
+
+
+def test_enum_values_from_structured_fields_are_not_reported_as_dropped():
+    # seen live: the LLM copied trial_phase from the structured fields into its plan
+    req = QueryRequest(query="Show a network of sponsors and drugs for glioblastoma trials", trial_phase=["2", "3"])
+    plan = P(analysis="network", network_source="sponsor", network_target="drug",
+             filters=Filters(condition="glioblastoma", phases=["PHASE2", "PHASE3"]))
+    grounded, warnings = ground_plan(plan, req)
+    assert grounded.filters.phases == ["PHASE2", "PHASE3"] and warnings == []

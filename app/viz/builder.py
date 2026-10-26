@@ -257,7 +257,8 @@ def _cross_tab(plan: QueryPlan, datasets: list[Dataset], cites: CitationFactory)
     studies = [s for d in datasets for s in d.studies]
     cells = agg.cross(studies, dx, dy)
     bx, by = agg.categorical(studies, dx), agg.categorical(studies, dy)
-    heatmap = plan.chart_preference == "heatmap" or len(by) > 8
+    # many series are unreadable as stacked bars, unless stacked bars were explicitly requested
+    heatmap = plan.chart_preference == "heatmap" or (len(by) > 8 and plan.chart_preference != "stacked")
     kx = agg.order_keys(bx, dx, plan.top_n)
     ky = agg.order_keys(by, dy, plan.top_n if heatmap else 8)
     rows = []

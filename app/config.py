@@ -27,9 +27,9 @@ class Settings:
     openai_model: str = "gpt-4.1-mini"
     planner: str = "auto"  # auto | llm | rules
     ctgov_base_url: str = "https://clinicaltrials.gov/api/v2"
-    ctgov_timeout_s: float = 60.0  # 1000-record pages with locations can be several MB
+    ctgov_timeout_s: float = 60.0  # 1000-record pages with locations are several MB
     ctgov_max_retries: int = 3
-    default_max_records: int = 1000
+    default_max_records: int = 5000  # ~5 s to fetch; covers most questions completely
     cache_dir: Path | None = None
     cache_ttl_s: int = 6 * 3600
     llm_timeout_s: float = 30.0

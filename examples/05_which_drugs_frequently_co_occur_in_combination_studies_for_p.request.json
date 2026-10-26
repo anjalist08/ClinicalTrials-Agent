@@ -1,0 +1,4 @@
+{
+  "query": "Which drugs frequently co-occur in combination studies for pancreatic cancer?",
+  "max_records": 10000
+}

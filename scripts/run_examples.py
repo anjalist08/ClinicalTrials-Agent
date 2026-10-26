@@ -39,9 +39,10 @@ EXAMPLES: list[dict] = [
     {"query": "Compare phases for trials involving nivolumab vs pembrolizumab"},
     {"query": "Which countries have the most recruiting trials for multiple myeloma?"},
     {"query": "Show a network of sponsors and drugs for glioblastoma trials", "trial_phase": ["Phase 2", "Phase 3"]},
-    {"query": "Which drugs frequently co-occur in combination studies for pancreatic cancer?"},
+    {"query": "Which drugs frequently co-occur in combination studies for pancreatic cancer?", "max_records": 10000},
     {"query": "What is the distribution of enrollment sizes for phase 3 type 2 diabetes trials?"},
-    {"query": "Breakdown of Alzheimer's disease trials by phase and status", "visualization_type": "stacked_bar_chart"},
+    {"query": "Breakdown of Alzheimer's disease trials by phase and status", "visualization_type": "stacked_bar_chart",
+     "max_records": 10000},
 ]
 
 OUT = ROOT / "examples"

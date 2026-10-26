@@ -1,0 +1,1756 @@
+{
+  "visualization": {
+    "type": "histogram",
+    "title": "Distribution of enrollment (participants)",
+    "subtitle": "type 2 diabetes · Phase 3",
+    "encoding": {
+      "x": {
+        "field": "bin_start",
+        "type": "quantitative",
+        "title": "Enrollment (participants)",
+        "unit": "participants"
+      },
+      "x2": {
+        "field": "bin_end",
+        "type": "quantitative",
+        "title": "Enrollment (participants)",
+        "unit": "participants"
+      },
+      "y": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Number of trials",
+        "format": "d",
+        "unit": "trials"
+      },
+      "label": {
+        "field": "bin_label",
+        "type": "ordinal",
+        "title": "Bin",
+        "sort": "data"
+      }
+    },
+    "data": [
+      {
+        "bin_start": 0,
+        "bin_end": 100,
+        "bin_label": "0–99",
+        "trial_count": 368,
+        "is_overflow": false,
+        "citation_count": 368,
+        "citations": [
+          {
+            "nct_id": "NCT00097500",
+            "url": "https://clinicaltrials.gov/study/NCT00097500",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00097500",
+            "brief_title": "Effects of Exenatide and Insulin Glargine in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "69"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01520753",
+            "url": "https://clinicaltrials.gov/study/NCT01520753",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01520753",
+            "brief_title": "Comparison of Two Biphasic Insulin Aspart Treatments in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "16"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Comparison of Two Biphasic Insulin Aspart Treatments in Subjects With Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT02564211",
+            "url": "https://clinicaltrials.gov/study/NCT02564211",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02564211",
+            "brief_title": "Ipragliflozin Add-on Long-term Study in Japanese Participants With Type 2 Diabetes Mellitus on Sitagliptin (MK-0431J-849)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "77"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 100,
+        "bin_end": 200,
+        "bin_label": "100–199",
+        "trial_count": 198,
+        "is_overflow": false,
+        "citation_count": 198,
+        "citations": [
+          {
+            "nct_id": "NCT01068197",
+            "url": "https://clinicaltrials.gov/study/NCT01068197",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01068197",
+            "brief_title": "Low Glycemic Load Diets in Latino Children at Risk for Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "113"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[1]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT02623998",
+            "url": "https://clinicaltrials.gov/study/NCT02623998",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02623998",
+            "brief_title": "Remission Evaluation of a Metabolic Intervention in Type 2 Diabetes With Sitagliptin (REMIT-Sita)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "102"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00044668",
+            "url": "https://clinicaltrials.gov/study/NCT00044668",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00044668",
+            "brief_title": "Evaluation of the Effect on Glucose Control and Safety of AC2993 in Patients With Type 2 Diabetes Treated With Metformin, Sulfonylurea, or Metformin and Sulfonylurea Combination",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "155"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Evaluation of the Effect on Glucose Control and Safety of AC2993 in Patients With Type 2 Diabetes Treated With Metformin, Sulfonylurea, or Metformin and Sulfonylurea Combination"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 200,
+        "bin_end": 300,
+        "bin_label": "200–299",
+        "trial_count": 202,
+        "is_overflow": false,
+        "citation_count": 202,
+        "citations": [
+          {
+            "nct_id": "NCT03434119",
+            "url": "https://clinicaltrials.gov/study/NCT03434119",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03434119",
+            "brief_title": "Efficacy and Safety of Soliqua Versus Lantus in Ethnically/Racially Diverse Patients With Type 2 Diabetes Mellitus Inadequately Controlled on Basal Insulin and Oral Antidiabetic Agents",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "241"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT04012775",
+            "url": "https://clinicaltrials.gov/study/NCT04012775",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04012775",
+            "brief_title": "Efficacy and Safety of Insulin Rinsulin® NPH Compared to Humulin® NPH in Type 2 Diabetes Mellitus Patients",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "201"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Safety of Insulin Rinsulin® NPH Compared to Humulin® NPH in Type 2 Diabetes Mellitus Patients"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01691846",
+            "url": "https://clinicaltrials.gov/study/NCT01691846",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01691846",
+            "brief_title": "A Study of Aleglitazar in Combination With Metformin in Patients With Type 2 Diabetes Mellitus Who Are Inadequately Controlled With Metformin Alone",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "200"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study of Aleglitazar in Combination With Metformin in Patients With Type 2 Diabetes Mellitus Who Are Inadequately Controlled With Metformin Alone"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 300,
+        "bin_end": 400,
+        "bin_label": "300–399",
+        "trial_count": 176,
+        "is_overflow": false,
+        "citation_count": 176,
+        "citations": [
+          {
+            "nct_id": "NCT00821977",
+            "url": "https://clinicaltrials.gov/study/NCT00821977",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00821977",
+            "brief_title": "Efficacy and Long-Term Safety of Vildagliptin as Monotherapy in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "338"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.keywords[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00480805",
+            "url": "https://clinicaltrials.gov/study/NCT00480805",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00480805",
+            "brief_title": "HYZAAR vs. Ramipril for Diabetes (0954A-245)(COMPLETED)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "312"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00487240",
+            "url": "https://clinicaltrials.gov/study/NCT00487240",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00487240",
+            "brief_title": "Comparison of Two Basal Insulin Therapies for Patients With Type 1 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "387"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": []
+          }
+        ]
+      },
+      {
+        "bin_start": 400,
+        "bin_end": 500,
+        "bin_label": "400–499",
+        "trial_count": 153,
+        "is_overflow": false,
+        "citation_count": 153,
+        "citations": [
+          {
+            "nct_id": "NCT00138619",
+            "url": "https://clinicaltrials.gov/study/NCT00138619",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00138619",
+            "brief_title": "Extension to a Study on the Efficacy and Safety of Vildagliptin Compared to Rosiglitazone in Drug Naive Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "478"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.keywords[0]",
+                "excerpt": "Type 2 diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00286494",
+            "url": "https://clinicaltrials.gov/study/NCT00286494",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00286494",
+            "brief_title": "Study of Alogliptin Combined With Pioglitazone in Subjects With Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "493"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Study of Alogliptin Combined With Pioglitazone in Subjects With Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT04390295",
+            "url": "https://clinicaltrials.gov/study/NCT04390295",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04390295",
+            "brief_title": "Efficacy and Safety of SHR3824 in Combination With Metformin in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "450"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 500,
+        "bin_end": 600,
+        "bin_label": "500–599",
+        "trial_count": 127,
+        "is_overflow": false,
+        "citation_count": 127,
+        "citations": [
+          {
+            "nct_id": "NCT00082381",
+            "url": "https://clinicaltrials.gov/study/NCT00082381",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00082381",
+            "brief_title": "Effect of AC2993 Compared With Insulin Glargine in Patients With Type 2 Diabetes Also Using Combination Therapy With Sulfonylurea and Metformin",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "551"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Effect of AC2993 Compared With Insulin Glargine in Patients With Type 2 Diabetes Also Using Combination Therapy With Sulfonylurea and Metformin"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00225277",
+            "url": "https://clinicaltrials.gov/study/NCT00225277",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00225277",
+            "brief_title": "Efficacy Study of Pioglitazone Compared to Glimepiride on Coronary Atherosclerotic Disease Progression in Subjects With Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "547"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy Study of Pioglitazone Compared to Glimepiride on Coronary Atherosclerotic Disease Progression in Subjects With Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01045707",
+            "url": "https://clinicaltrials.gov/study/NCT01045707",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01045707",
+            "brief_title": "Comparison of NN5401 Versus Insulin Glargine, Both Combined With Metformin Treatment, in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "530"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Comparison of NN5401 Versus Insulin Glargine, Both Combined With Metformin Treatment, in Subjects With Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 600,
+        "bin_end": 700,
+        "bin_label": "600–699",
+        "trial_count": 76,
+        "is_overflow": false,
+        "citation_count": 76,
+        "citations": [
+          {
+            "nct_id": "NCT00150410",
+            "url": "https://clinicaltrials.gov/study/NCT00150410",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00150410",
+            "brief_title": "Demonstrate Exubera Works As Well As Avandia When Added To Sulfonylurea + Metformin In Controlling Glucose",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "626"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": []
+          },
+          {
+            "nct_id": "NCT02855684",
+            "url": "https://clinicaltrials.gov/study/NCT02855684",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02855684",
+            "brief_title": "Comparison of the Efficacy and Safety of a New Formulation of Insulin Glargine With Lantus in Patients With Type 2 Diabetes Insufficiently Controlled With Non-insulin Antidiabetic Therapy",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "604"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00998686",
+            "url": "https://clinicaltrials.gov/study/NCT00998686",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00998686",
+            "brief_title": "Safety and Efficacy Study of Dutogliptin in Subjects With Type 2 Diabetes Mellitus on a Background Medication of Metformin",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "650"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 700,
+        "bin_end": 800,
+        "bin_label": "700–799",
+        "trial_count": 51,
+        "is_overflow": false,
+        "citation_count": 51,
+        "citations": [
+          {
+            "nct_id": "NCT00151762",
+            "url": "https://clinicaltrials.gov/study/NCT00151762",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00151762",
+            "brief_title": "Long-Term Study of Safety and Efficacy of WelChol® as an Additional Therapy in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "780"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00850239",
+            "url": "https://clinicaltrials.gov/study/NCT00850239",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00850239",
+            "brief_title": "Safety and Efficacy Study of Dutogliptin/PHX1149T in Subjects With Type 2 Diabetes Mellitus on a Background Medication of Metformin",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "700"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT03172494",
+            "url": "https://clinicaltrials.gov/study/NCT03172494",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03172494",
+            "brief_title": "A Trial Comparing Insulin Degludec/Liraglutide, Insulin Degludec, and Liraglutide in Chinese Subjects With Type 2 Diabetes Inadequately Controlled on Oral Antidiabetic Drugs (OADs)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "720"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Trial Comparing Insulin Degludec/Liraglutide, Insulin Degludec, and Liraglutide in Chinese Subjects With Type 2 Diabetes Inadequately Controlled on Oral Antidiabetic Drugs (OADs)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 800,
+        "bin_end": 900,
+        "bin_label": "800–899",
+        "trial_count": 41,
+        "is_overflow": false,
+        "citation_count": 41,
+        "citations": [
+          {
+            "nct_id": "NCT01370005",
+            "url": "https://clinicaltrials.gov/study/NCT01370005",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01370005",
+            "brief_title": "12 Week Efficacy and Safety Study of Empagliflozin (BI 10773) in Hypertensive Patients With Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "825"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "12 Week Efficacy and Safety Study of Empagliflozin (BI 10773) in Hypertensive Patients With Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07026968",
+            "url": "https://clinicaltrials.gov/study/NCT07026968",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07026968",
+            "brief_title": "A Study of Prusogliptin Tablets Combined With Dapagliflozin Tablets and Metformin Hydrochloride Extended Release Tablets in Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "815"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT02863328",
+            "url": "https://clinicaltrials.gov/study/NCT02863328",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02863328",
+            "brief_title": "Efficacy and Safety of Oral Semaglutide Versus Empagliflozin in Subjects With Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "822"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Safety of Oral Semaglutide Versus Empagliflozin in Subjects With Type 2 Diabetes Mellitus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 900,
+        "bin_end": 1000,
+        "bin_label": "900–999",
+        "trial_count": 34,
+        "is_overflow": false,
+        "citation_count": 34,
+        "citations": [
+          {
+            "nct_id": "NCT00643851",
+            "url": "https://clinicaltrials.gov/study/NCT00643851",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00643851",
+            "brief_title": "An Efficacy & Safety Study of BMS-512148 in Combination With Metformin Extended Release Tablets",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "994"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07653477",
+            "url": "https://clinicaltrials.gov/study/NCT07653477",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07653477",
+            "brief_title": "Phase III Study of UBT251 Injection in Patients With Type 2 Diabetes With Inadequate Glycemic Control on Metformin ± Sulfonylurea/SGLT2 Inhibitor Therapy (UNIGUIDE-2)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "956"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01029886",
+            "url": "https://clinicaltrials.gov/study/NCT01029886",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01029886",
+            "brief_title": "Safety and Efficacy of Exenatide Once Weekly Versus Liraglutide in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "912"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1000,
+        "bin_end": 1100,
+        "bin_label": "1,000–1,099",
+        "trial_count": 35,
+        "is_overflow": false,
+        "citation_count": 35,
+        "citations": [
+          {
+            "nct_id": "NCT00359762",
+            "url": "https://clinicaltrials.gov/study/NCT00359762",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00359762",
+            "brief_title": "Exenatide Versus Glimepiride in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1029"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00130208",
+            "url": "https://clinicaltrials.gov/study/NCT00130208",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00130208",
+            "brief_title": "Effect of Sulodexide in Early Diabetic Nephropathy",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1056"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": []
+          },
+          {
+            "nct_id": "NCT00701090",
+            "url": "https://clinicaltrials.gov/study/NCT00701090",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00701090",
+            "brief_title": "A Study to Test the Safety and Efficacy of Sitagliptin Compared to Glimepiride in Patients With Type 2 Diabetes on a Stable Dose of Metformin (0431-803)(COMPLETED)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1035"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus, Non Insulin Dependent"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1100,
+        "bin_end": 1200,
+        "bin_label": "1,100–1,199",
+        "trial_count": 16,
+        "is_overflow": false,
+        "citation_count": 16,
+        "citations": [
+          {
+            "nct_id": "NCT02273050",
+            "url": "https://clinicaltrials.gov/study/NCT02273050",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02273050",
+            "brief_title": "Evaluate the Efficacy and Safety of Saxagliptin in Combination With Metformin IR Compared to Saxagliptin Monotherapy and to Metformin IR Monotherapy in Drug Naive Chinese Subjects With Type 2 Diabetes Who Have Inadequate Glycaemic Control",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1136"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01809327",
+            "url": "https://clinicaltrials.gov/study/NCT01809327",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01809327",
+            "brief_title": "A Study to Evaluate the Effectiveness, Safety, and Tolerability of Canagliflozin in Combination With Metformin in the Treatment of Patients With Type 2 Diabetes Mellitus With Inadequate Glycemic Control With Diet and Exercise",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1186"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study to Evaluate the Effectiveness, Safety, and Tolerability of Canagliflozin in Combination With Metformin in the Treatment of Patients With Type 2 Diabetes Mellitus With Inadequate Glycemic Control With Diet and Exercise"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00717457",
+            "url": "https://clinicaltrials.gov/study/NCT00717457",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00717457",
+            "brief_title": "A Study of Taspoglutide Versus Exenatide for the Treatment of Patients With Type 2 Diabetes Mellitus Inadequately Controlled With Metformin, Thiazolidinedione or a Combination of Both.",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1189"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study of Taspoglutide Versus Exenatide for the Treatment of Patients With Type 2 Diabetes Mellitus Inadequately Controlled With Metformin, Thiazolidinedione or a Combination of Both."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1200,
+        "bin_end": 1300,
+        "bin_label": "1,200–1,299",
+        "trial_count": 22,
+        "is_overflow": false,
+        "citation_count": 22,
+        "citations": [
+          {
+            "nct_id": "NCT03552757",
+            "url": "https://clinicaltrials.gov/study/NCT03552757",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03552757",
+            "brief_title": "Research Study Investigating How Well Semaglutide Works in People With Type 2 Diabetes Suffering From Overweight or Obesity",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1210"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Research Study Investigating How Well Semaglutide Works in People With Type 2 Diabetes Suffering From Overweight or Obesity"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00954447",
+            "url": "https://clinicaltrials.gov/study/NCT00954447",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00954447",
+            "brief_title": "Efficacy and Safety of Linagliptin in Combination With Insulin in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1263"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Safety of Linagliptin in Combination With Insulin in Patients With Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00660907",
+            "url": "https://clinicaltrials.gov/study/NCT00660907",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00660907",
+            "brief_title": "Efficacy and Safety of Dapagliflozin in Combination With Metformin in Type 2 Diabetes Patients",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1217"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1300,
+        "bin_end": 1400,
+        "bin_label": "1,300–1,399",
+        "trial_count": 5,
+        "is_overflow": false,
+        "citation_count": 5,
+        "citations": [
+          {
+            "nct_id": "NCT01257334",
+            "url": "https://clinicaltrials.gov/study/NCT01257334",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01257334",
+            "brief_title": "Patients With Type 2 Diabetes Mellitus With Insufficient Glycaemic Control Despite Treatment With Metformin Alone or Metformin in Combination With a Sulfonylurea",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1390"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01468987",
+            "url": "https://clinicaltrials.gov/study/NCT01468987",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01468987",
+            "brief_title": "A Study in Participants With Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1369"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study in Participants With Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00327015",
+            "url": "https://clinicaltrials.gov/study/NCT00327015",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00327015",
+            "brief_title": "A Phase 3 Study of BMS-477118 in Combination With Metformin in Subjects With Type 2 Diabetes Who Are Not Controlled With Diet and Exercise",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1306"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Phase 3 Study of BMS-477118 in Combination With Metformin in Subjects With Type 2 Diabetes Who Are Not Controlled With Diet and Exercise"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1400,
+        "bin_end": 1500,
+        "bin_label": "1,400–1,499",
+        "trial_count": 14,
+        "is_overflow": false,
+        "citation_count": 14,
+        "citations": [
+          {
+            "nct_id": "NCT00968812",
+            "url": "https://clinicaltrials.gov/study/NCT00968812",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00968812",
+            "brief_title": "CANagliflozin Treatment And Trial Analysis-Sulfonylurea (CANTATA-SU) SGLT2 Add-on to Metformin Versus Glimepiride",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1452"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.keywords[4]",
+                "excerpt": "Type 2 diabetes mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00106808",
+            "url": "https://clinicaltrials.gov/study/NCT00106808",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00106808",
+            "brief_title": "Study of Muraglitazar Versus Pioglitazone in Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1440"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01422876",
+            "url": "https://clinicaltrials.gov/study/NCT01422876",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01422876",
+            "brief_title": "Efficacy and Safety of Empagliflozin (BI 10773) / Linagliptin (BI 1356) Fixed Dose Combination in Treatment naïve and Metformin Treated Type 2 Diabetes Patients",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1405"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Safety of Empagliflozin (BI 10773) / Linagliptin (BI 1356) Fixed Dose Combination in Treatment naïve and Metformin Treated Type 2 Diabetes Patients"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1500,
+        "bin_end": 1600,
+        "bin_label": "1,500–1,599",
+        "trial_count": 11,
+        "is_overflow": false,
+        "citation_count": 11,
+        "citations": [
+          {
+            "nct_id": "NCT01167881",
+            "url": "https://clinicaltrials.gov/study/NCT01167881",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01167881",
+            "brief_title": "Efficacy and Safety of Empagliflozin (BI 10773) With Metformin in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1549"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Safety of Empagliflozin (BI 10773) With Metformin in Patients With Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07784270",
+            "url": "https://clinicaltrials.gov/study/NCT07784270",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07784270",
+            "brief_title": "A Study to Evaluate Effect of AZD6234 in Adult Participants With Type 2 Diabetes Mellitus and Obesity or Overweight",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1500"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study to Evaluate Effect of AZD6234 in Adult Participants With Type 2 Diabetes Mellitus and Obesity or Overweight"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00308347",
+            "url": "https://clinicaltrials.gov/study/NCT00308347",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00308347",
+            "brief_title": "A Research Study to Evaluate the Renal (Kidney) Protective Effects of Losartan in Patients With Non-insulin Dependent Diabetes (0954-147)(COMPLETED)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1513"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1600,
+        "bin_end": 1700,
+        "bin_label": "1,600–1,699",
+        "trial_count": 7,
+        "is_overflow": false,
+        "citation_count": 7,
+        "citations": [
+          {
+            "nct_id": "NCT06045221",
+            "url": "https://clinicaltrials.gov/study/NCT06045221",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06045221",
+            "brief_title": "A Study of Orforglipron (LY3502970) Compared With Semaglutide in Participants With Type 2 Diabetes Inadequately Controlled With Metformin",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1698"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT03078478",
+            "url": "https://clinicaltrials.gov/study/NCT03078478",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03078478",
+            "brief_title": "A Trial Comparing the Efficacy and Safety of Insulin Degludec and Insulin Glargine 300 Units/mL in Subjects With Type 2 Diabetes Mellitus Inadequately Treated With Basal Insulin With or Without Oral Antidiabetic Drugs",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1609"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Trial Comparing the Efficacy and Safety of Insulin Degludec and Insulin Glargine 300 Units/mL in Subjects With Type 2 Diabetes Mellitus Inadequately Treated With Basal Insulin With or Without Oral Antidiabetic Drugs"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05872620",
+            "url": "https://clinicaltrials.gov/study/NCT05872620",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05872620",
+            "brief_title": "A Study of Orforglipron in Adult Participants With Obesity or Overweight and Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1613"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[2]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1700,
+        "bin_end": 1800,
+        "bin_label": "1,700–1,799",
+        "trial_count": 5,
+        "is_overflow": false,
+        "citation_count": 5,
+        "citations": [
+          {
+            "nct_id": "NCT00032487",
+            "url": "https://clinicaltrials.gov/study/NCT00032487",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00032487",
+            "brief_title": "Glycemic Control and Complications in Diabetes Mellitus Type 2 (VADT)",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1791"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00095030",
+            "url": "https://clinicaltrials.gov/study/NCT00095030",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00095030",
+            "brief_title": "Study Comparing Muraglitazar With Glimepiride in Type 2 Diabetics Who Are Not Controlled With Metformin Alone",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1752"
+              }
+            ],
+            "match_evidence": []
+          },
+          {
+            "nct_id": "NCT02040441",
+            "url": "https://clinicaltrials.gov/study/NCT02040441",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02040441",
+            "brief_title": "Proteomic Prediction and Renin Angiotensin Aldosterone System Inhibition Prevention Of Early Diabetic nephRopathy In TYpe 2 Diabetic Patients With Normoalbuminuria",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1777"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": []
+          }
+        ]
+      },
+      {
+        "bin_start": 1800,
+        "bin_end": 1900,
+        "bin_label": "1,800–1,899",
+        "trial_count": 5,
+        "is_overflow": false,
+        "citation_count": 5,
+        "citations": [
+          {
+            "nct_id": "NCT03987919",
+            "url": "https://clinicaltrials.gov/study/NCT03987919",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03987919",
+            "brief_title": "A Study of Tirzepatide (LY3298176) Versus Semaglutide Once Weekly as Add-on Therapy to Metformin in Participants With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1879"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT03970031",
+            "url": "https://clinicaltrials.gov/study/NCT03970031",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03970031",
+            "brief_title": "A Study of MSDC-0602K to Assess Glycemic Control and Cardiovascular Outcomes in Patients With Pre-T2D or T2D and NAFLD/NASH",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1800"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": []
+          },
+          {
+            "nct_id": "NCT02607865",
+            "url": "https://clinicaltrials.gov/study/NCT02607865",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT02607865",
+            "brief_title": "Efficacy and Long-term Safety of Oral Semaglutide Versus Sitagliptin in Subjects With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1864"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Efficacy and Long-term Safety of Oral Semaglutide Versus Sitagliptin in Subjects With Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 1900,
+        "bin_end": 2000,
+        "bin_label": "1,900–1,999",
+        "trial_count": 4,
+        "is_overflow": false,
+        "citation_count": 4,
+        "citations": [
+          {
+            "nct_id": "NCT00860288",
+            "url": "https://clinicaltrials.gov/study/NCT00860288",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00860288",
+            "brief_title": "Efficacy and Long-Term Safety of Vildagliptin as Add-on Therapy to Metformin in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1988"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.keywords[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00484198",
+            "url": "https://clinicaltrials.gov/study/NCT00484198",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00484198",
+            "brief_title": "Study of Rivoglitazone in Type 2 Diabetes Mellitus",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1912"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes Mellitus"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07321886",
+            "url": "https://clinicaltrials.gov/study/NCT07321886",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07321886",
+            "brief_title": "A Study of Eloralintide (LY3841136) in Participants With Obesity, or Overweight Without Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "1980"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study of Eloralintide (LY3841136) in Participants With Obesity, or Overweight Without Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 2000,
+        "bin_end": 2100,
+        "bin_label": "2,000–2,099",
+        "trial_count": 6,
+        "is_overflow": false,
+        "citation_count": 6,
+        "citations": [
+          {
+            "nct_id": "NCT01023165",
+            "url": "https://clinicaltrials.gov/study/NCT01023165",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01023165",
+            "brief_title": "Effects of Intensive Bolus Intravenous Insulin Delivery on Metabolic Integrity in Type 1 and Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "2000"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Effects of Intensive Bolus Intravenous Insulin Delivery on Metabolic Integrity in Type 1 and Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07351045",
+            "url": "https://clinicaltrials.gov/study/NCT07351045",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07351045",
+            "brief_title": "A Clinical Study to Evaluate the Effects of Enicepatide (RO7795068) in Participants With Obesity or Overweight Without Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "2000"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ESTIMATED"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Clinical Study to Evaluate the Effects of Enicepatide (RO7795068) in Participants With Obesity or Overweight Without Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT00308737",
+            "url": "https://clinicaltrials.gov/study/NCT00308737",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT00308737",
+            "brief_title": "Safety of Inhaled Insulin With Type 1 and Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "2053"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "Safety of Inhaled Insulin With Type 1 and Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "bin_start": 2100,
+        "bin_end": null,
+        "bin_label": "≥ 2,100",
+        "trial_count": 78,
+        "is_overflow": true,
+        "citation_count": 78,
+        "citations": [
+          {
+            "nct_id": "NCT01455896",
+            "url": "https://clinicaltrials.gov/study/NCT01455896",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01455896",
+            "brief_title": "A Study to Evaluate Cardiovascular Outcomes in Patients With Type 2 Diabetes Treated With ITCA 650",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "4156"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Type 2 Diabetes"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT01018173",
+            "url": "https://clinicaltrials.gov/study/NCT01018173",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01018173",
+            "brief_title": "A Study of Taspoglutide in Patients With Inadequately Controlled Diabetes Mellitus Type 2 and Cardiovascular Disease",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "2118"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": []
+          },
+          {
+            "nct_id": "NCT01243424",
+            "url": "https://clinicaltrials.gov/study/NCT01243424",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT01243424",
+            "brief_title": "CAROLINA: Cardiovascular Outcome Study of Linagliptin Versus Glimepiride in Patients With Type 2 Diabetes",
+            "evidence": [
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.count",
+                "excerpt": "6103"
+              },
+              {
+                "path": "protocolSection.designModule.enrollmentInfo.type",
+                "excerpt": "ACTUAL"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "CAROLINA: Cardiovascular Outcome Study of Linagliptin Versus Glimepiride in Patients With Type 2 Diabetes"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "query": "What is the distribution of enrollment sizes for phase 3 type 2 diabetes trials?",
+    "interpretation": "Distribution of enrollment sizes for phase 3 trials on type 2 diabetes.",
+    "visualization_rationale": "Enrollment (participants) is a numeric attribute; a histogram shows its distribution across trials.",
+    "plan": {
+      "interpretation": "Distribution of enrollment sizes for phase 3 trials on type 2 diabetes.",
+      "analysis": "histogram",
+      "numeric_field": "enrollment",
+      "filters": {
+        "condition": "type 2 diabetes",
+        "phases": [
+          "PHASE3"
+        ],
+        "statuses": [],
+        "intervention_types": [],
+        "sponsor_classes": []
+      },
+      "groups": [],
+      "metric": "count",
+      "chart_preference": "auto",
+      "assumptions": [
+        "Enrollment size is represented by the 'enrollment' numeric field.",
+        "Phase 3 is interpreted as 'PHASE3' in the phases filter.",
+        "Type 2 diabetes is used as the condition filter verbatim."
+      ]
+    },
+    "planner": {
+      "mode": "llm",
+      "model": "gpt-4.1-mini",
+      "attempts": 1
+    },
+    "filters_applied": {
+      "condition": "type 2 diabetes",
+      "phases": [
+        "PHASE3"
+      ],
+      "statuses": [],
+      "intervention_types": [],
+      "sponsor_classes": []
+    },
+    "groups": [],
+    "counting_rule": "Each trial with a value is counted in exactly one bin.",
+    "rendering": {
+      "sort": "ascending by bin_start",
+      "units": {
+        "trial_count": "trials",
+        "bin_start": "participants",
+        "bin_end": "participants"
+      },
+      "value_field": "trial_count",
+      "missing_values": "bins are half-open [bin_start, bin_end); bin_end=null marks the overflow bin"
+    },
+    "data_completeness": {
+      "total_matching": 1646,
+      "records_analyzed": 1646,
+      "complete": true
+    },
+    "citations": {
+      "mode": "summary",
+      "max_per_datum": 3,
+      "excerpt_semantics": "evidence[].excerpt is the exact value at evidence[].path in the API v2 record (derived=true marks values the datum is computed from, e.g. a location count)."
+    },
+    "api_requests": [
+      {
+        "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=type+2+diabetes&filter.advanced=AREA%5BPhase%5D%28PHASE3%29&fields=IdentificationModule%2CStatusModule%2CSponsorCollaboratorsModule%2CConditionsModule%2CDesignModule%2CArmsInterventionsModule%2CEligibilityModule%2CContactsLocationsModule%2CHasResults&format=json&countTotal=true&pageSize=1000",
+        "total_count": 1646,
+        "retrieved": 1646,
+        "pages": 2,
+        "from_cache": true,
+        "fallbacks": []
+      }
+    ],
+    "assumptions": [
+      "Enrollment size is represented by the 'enrollment' numeric field.",
+      "Phase 3 is interpreted as 'PHASE3' in the phases filter.",
+      "Type 2 diabetes is used as the condition filter verbatim."
+    ],
+    "warnings": [
+      "12 trial(s) lack enrollment (participants) and are excluded.",
+      "Values ≥ 2,100 (above the 95th percentile) are folded into one overflow bin (bin_end = null)."
+    ],
+    "source": {
+      "name": "ClinicalTrials.gov",
+      "api": "https://clinicaltrials.gov/api/v2",
+      "api_version": "2.0.5",
+      "data_timestamp": "2026-10-23T09:00:04",
+      "retrieved_at": "2026-10-26T07:43:50+00:00"
+    },
+    "timing_ms": {
+      "plan": 2062,
+      "fetch": 1618,
+      "aggregate": 139,
+      "total": 3820
+    }
+  }
+}

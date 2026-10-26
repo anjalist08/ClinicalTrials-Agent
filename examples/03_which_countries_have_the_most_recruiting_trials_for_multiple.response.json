@@ -1,0 +1,1344 @@
+{
+  "visualization": {
+    "type": "bar_chart",
+    "title": "Trials by country",
+    "subtitle": "multiple myeloma · recruiting",
+    "encoding": {
+      "y": {
+        "field": "country",
+        "type": "nominal",
+        "title": "Country",
+        "sort": [
+          "United States",
+          "China",
+          "France",
+          "Spain",
+          "Italy",
+          "Australia",
+          "Canada",
+          "United Kingdom",
+          "Germany",
+          "Israel",
+          "South Korea",
+          "Japan",
+          "Greece",
+          "Poland",
+          "Belgium",
+          "Norway",
+          "Brazil",
+          "Netherlands",
+          "Denmark",
+          "Czechia"
+        ]
+      },
+      "x": {
+        "field": "trial_count",
+        "type": "quantitative",
+        "title": "Number of trials",
+        "format": "d",
+        "unit": "trials"
+      }
+    },
+    "data": [
+      {
+        "country": "United States",
+        "trial_count": 278,
+        "citation_count": 278,
+        "citations": [
+          {
+            "nct_id": "NCT06822972",
+            "url": "https://clinicaltrials.gov/study/NCT06822972",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06822972",
+            "brief_title": "HCMT/MM2401: Ph2 Study of Selinexor + Bispecific Antibody for RRMM",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "United States"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma in Relapse"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06356571",
+            "url": "https://clinicaltrials.gov/study/NCT06356571",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06356571",
+            "brief_title": "A Study to Investigate Subcutaneous Isatuximab in Combination With Weekly Carfilzomib and Dexamethasone in Adult Participants With Relapsed and/or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "United States"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.identificationModule.briefTitle",
+                "excerpt": "A Study to Investigate Subcutaneous Isatuximab in Combination With Weekly Carfilzomib and Dexamethasone in Adult Participants With Relapsed and/or Refractory Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07290309",
+            "url": "https://clinicaltrials.gov/study/NCT07290309",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07290309",
+            "brief_title": "Survivors Uniting for Remote Guided Exercise",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "United States"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[1]",
+                "excerpt": "Cancer (Colon Cancer, Breast Cancer, Lymphoma, Chronic Lymphoma Leukemia, Multiple Myeloma)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "China",
+        "trial_count": 164,
+        "citation_count": 164,
+        "citations": [
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[62].country",
+                "excerpt": "China"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06252792",
+            "url": "https://clinicaltrials.gov/study/NCT06252792",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06252792",
+            "brief_title": "Dara-PD in the Treatment of Patients With First Relapse of Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "China"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06697483",
+            "url": "https://clinicaltrials.gov/study/NCT06697483",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06697483",
+            "brief_title": "Risk Stratification and MRD-driven Maintenance for MM After ASCT",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "China"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "France",
+        "trial_count": 67,
+        "citation_count": 67,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[14].country",
+                "excerpt": "France"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[83].country",
+                "excerpt": "France"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT04935684",
+            "url": "https://clinicaltrials.gov/study/NCT04935684",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04935684",
+            "brief_title": "Faecal Microbiota Transplantation After Allogeneic Stem Cell Transplantation",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "France"
+              }
+            ],
+            "match_evidence": []
+          }
+        ]
+      },
+      {
+        "country": "Spain",
+        "trial_count": 60,
+        "citation_count": 60,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[30].country",
+                "excerpt": "Spain"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[145].country",
+                "excerpt": "Spain"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05372354",
+            "url": "https://clinicaltrials.gov/study/NCT05372354",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05372354",
+            "brief_title": "A Study to Evaluate Safety, Drug Levels and Effectiveness of CC-92480 (BMS-986348) in Combination With Other Treatments in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[9].country",
+                "excerpt": "Spain"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Italy",
+        "trial_count": 53,
+        "citation_count": 53,
+        "citations": [
+          {
+            "nct_id": "NCT07403630",
+            "url": "https://clinicaltrials.gov/study/NCT07403630",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07403630",
+            "brief_title": "INTEGRATIVE \"MULTI-OMICS\" AND FUNCTIONAL PLATFORM FOR THE COMPLETE DIAGNOSTIC CHARACTERIZATION OF TUMORS: THE ITALIAN TUMOR CHEMOGENOMIC PROFILER (IT-TCP)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Italy"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[1]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[19].country",
+                "excerpt": "Italy"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[112].country",
+                "excerpt": "Italy"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Australia",
+        "trial_count": 49,
+        "citation_count": 49,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[6].country",
+                "excerpt": "Australia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[41].country",
+                "excerpt": "Australia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07589634",
+            "url": "https://clinicaltrials.gov/study/NCT07589634",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07589634",
+            "brief_title": "A Study Evaluating the Prophylactic Use of Tocilizumab to Prevent Cytokine Release Syndrome With Ramantamig Administration in Participants With Relapsed/Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[9].country",
+                "excerpt": "Australia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Canada",
+        "trial_count": 47,
+        "citation_count": 47,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[8].country",
+                "excerpt": "Canada"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[58].country",
+                "excerpt": "Canada"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05372354",
+            "url": "https://clinicaltrials.gov/study/NCT05372354",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05372354",
+            "brief_title": "A Study to Evaluate Safety, Drug Levels and Effectiveness of CC-92480 (BMS-986348) in Combination With Other Treatments in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[5].country",
+                "excerpt": "Canada"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "United Kingdom",
+        "trial_count": 47,
+        "citation_count": 47,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[32].country",
+                "excerpt": "United Kingdom"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05372354",
+            "url": "https://clinicaltrials.gov/study/NCT05372354",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05372354",
+            "brief_title": "A Study to Evaluate Safety, Drug Levels and Effectiveness of CC-92480 (BMS-986348) in Combination With Other Treatments in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[12].country",
+                "excerpt": "United Kingdom"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07393282",
+            "url": "https://clinicaltrials.gov/study/NCT07393282",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07393282",
+            "brief_title": "A Study to Compare Linvoseltamab and Daratumumab Treatment in High-Risk Smoldering Multiple Myeloma (HR-SMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[22].country",
+                "excerpt": "United Kingdom"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "High Risk Smoldering Multiple Myeloma (HR-SMM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Germany",
+        "trial_count": 46,
+        "citation_count": 46,
+        "citations": [
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[91].country",
+                "excerpt": "Germany"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05836896",
+            "url": "https://clinicaltrials.gov/study/NCT05836896",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05836896",
+            "brief_title": "A Phase I Trial to Establish the Safety and Maximum Tolerated Dose of High-affinity Autologous BCMA-targeting Chimeric Antigen Receptor (CAR) T-cells in Patients With Relapsed and Refractory B-cell Malignancies",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Germany"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[3]",
+                "excerpt": "Multiple Myeloma, Refractory"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07044427",
+            "url": "https://clinicaltrials.gov/study/NCT07044427",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07044427",
+            "brief_title": "Fall Risk Assessment and an Exercise Intervention for Prevention of Falls in Multiple Myeloma Patients",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Germany"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Israel",
+        "trial_count": 34,
+        "citation_count": 34,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[17].country",
+                "excerpt": "Israel"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[106].country",
+                "excerpt": "Israel"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06971380",
+            "url": "https://clinicaltrials.gov/study/NCT06971380",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06971380",
+            "brief_title": "Study of HBI0101 (NXC-201) CAR-T Therapy in Multiple Myeloma and Light-Chain Amyloidosis",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Israel"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma, Refractory to Standard Treatment"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "South Korea",
+        "trial_count": 33,
+        "citation_count": 33,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[28].country",
+                "excerpt": "South Korea"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[138].country",
+                "excerpt": "South Korea"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07393282",
+            "url": "https://clinicaltrials.gov/study/NCT07393282",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07393282",
+            "brief_title": "A Study to Compare Linvoseltamab and Daratumumab Treatment in High-Risk Smoldering Multiple Myeloma (HR-SMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[15].country",
+                "excerpt": "South Korea"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "High Risk Smoldering Multiple Myeloma (HR-SMM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Japan",
+        "trial_count": 32,
+        "citation_count": 32,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[21].country",
+                "excerpt": "Japan"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[122].country",
+                "excerpt": "Japan"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07393282",
+            "url": "https://clinicaltrials.gov/study/NCT07393282",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07393282",
+            "brief_title": "A Study to Compare Linvoseltamab and Daratumumab Treatment in High-Risk Smoldering Multiple Myeloma (HR-SMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[9].country",
+                "excerpt": "Japan"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "High Risk Smoldering Multiple Myeloma (HR-SMM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Greece",
+        "trial_count": 31,
+        "citation_count": 31,
+        "citations": [
+          {
+            "nct_id": "NCT05573802",
+            "url": "https://clinicaltrials.gov/study/NCT05573802",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05573802",
+            "brief_title": "A Study to Investigate Safety and Clinical Activity of Belantamab Mafodotin in Combination With Lenalidomide, Dexamethasone and Nirogacestat in Patients With Transplant Ineligible Newly Diagnosed Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Greece"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[95].country",
+                "excerpt": "Greece"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07589634",
+            "url": "https://clinicaltrials.gov/study/NCT07589634",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07589634",
+            "brief_title": "A Study Evaluating the Prophylactic Use of Tocilizumab to Prevent Cytokine Release Syndrome With Ramantamig Administration in Participants With Relapsed/Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[15].country",
+                "excerpt": "Greece"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Poland",
+        "trial_count": 27,
+        "citation_count": 27,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[25].country",
+                "excerpt": "Poland"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[132].country",
+                "excerpt": "Poland"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07393282",
+            "url": "https://clinicaltrials.gov/study/NCT07393282",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07393282",
+            "brief_title": "A Study to Compare Linvoseltamab and Daratumumab Treatment in High-Risk Smoldering Multiple Myeloma (HR-SMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[14].country",
+                "excerpt": "Poland"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "High Risk Smoldering Multiple Myeloma (HR-SMM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Belgium",
+        "trial_count": 26,
+        "citation_count": 26,
+        "citations": [
+          {
+            "nct_id": "NCT03852407",
+            "url": "https://clinicaltrials.gov/study/NCT03852407",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT03852407",
+            "brief_title": "Allogeneic Hematopoietic Cell Transplantation From HLA-matched Donor After Flu-Mel-PTCy Versus Flu-Mel-ATG Reduced-intensity Conditioning",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Belgium"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[6]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05519085",
+            "url": "https://clinicaltrials.gov/study/NCT05519085",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05519085",
+            "brief_title": "A Study to Evaluate Mezigdomide, Bortezomib and Dexamethasone (MEZIVd) Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) in Participants With Relapsed or Refractory Multiple Myeloma (RRMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[76].country",
+                "excerpt": "Belgium"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Relapsed or Refractory Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07236021",
+            "url": "https://clinicaltrials.gov/study/NCT07236021",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07236021",
+            "brief_title": "e-Motion : Promoting Emotion Regulation in Chronic Cancer",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[0].country",
+                "excerpt": "Belgium"
+              }
+            ],
+            "match_evidence": []
+          }
+        ]
+      },
+      {
+        "country": "Norway",
+        "trial_count": 24,
+        "citation_count": 24,
+        "citations": [
+          {
+            "nct_id": "NCT05372354",
+            "url": "https://clinicaltrials.gov/study/NCT05372354",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05372354",
+            "brief_title": "A Study to Evaluate Safety, Drug Levels and Effectiveness of CC-92480 (BMS-986348) in Combination With Other Treatments in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[8].country",
+                "excerpt": "Norway"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06896916",
+            "url": "https://clinicaltrials.gov/study/NCT06896916",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06896916",
+            "brief_title": "Study of Intravenously (IV) Infused Etentamig in Combination With an Oral Cereblon E3 Ligase Modulatory Drug (CELMoD) Agent Assessing Adverse Events and Change in Disease Activity in Adult Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[26].country",
+                "excerpt": "Norway"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07107529",
+            "url": "https://clinicaltrials.gov/study/NCT07107529",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07107529",
+            "brief_title": "Study for Frail Patients With Newly Diagnosed Multiple Myeloma Treated With Daratumumab With Teclistamab or Talquetamab.",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[23].country",
+                "excerpt": "Norway"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma (MM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Brazil",
+        "trial_count": 23,
+        "citation_count": 23,
+        "citations": [
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[48].country",
+                "excerpt": "Brazil"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05519085",
+            "url": "https://clinicaltrials.gov/study/NCT05519085",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05519085",
+            "brief_title": "A Study to Evaluate Mezigdomide, Bortezomib and Dexamethasone (MEZIVd) Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) in Participants With Relapsed or Refractory Multiple Myeloma (RRMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[80].country",
+                "excerpt": "Brazil"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Relapsed or Refractory Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06500884",
+            "url": "https://clinicaltrials.gov/study/NCT06500884",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06500884",
+            "brief_title": "A Study to Evaluate Preventive Treatments for GPRC5D-related Oral Events",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[9].country",
+                "excerpt": "Brazil"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Netherlands",
+        "trial_count": 21,
+        "citation_count": 21,
+        "citations": [
+          {
+            "nct_id": "NCT06896916",
+            "url": "https://clinicaltrials.gov/study/NCT06896916",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06896916",
+            "brief_title": "Study of Intravenously (IV) Infused Etentamig in Combination With an Oral Cereblon E3 Ligase Modulatory Drug (CELMoD) Agent Assessing Adverse Events and Change in Disease Activity in Adult Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[24].country",
+                "excerpt": "Netherlands"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06500884",
+            "url": "https://clinicaltrials.gov/study/NCT06500884",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06500884",
+            "brief_title": "A Study to Evaluate Preventive Treatments for GPRC5D-related Oral Events",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[15].country",
+                "excerpt": "Netherlands"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07107529",
+            "url": "https://clinicaltrials.gov/study/NCT07107529",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07107529",
+            "brief_title": "Study for Frail Patients With Newly Diagnosed Multiple Myeloma Treated With Daratumumab With Teclistamab or Talquetamab.",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[14].country",
+                "excerpt": "Netherlands"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma (MM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Denmark",
+        "trial_count": 18,
+        "citation_count": 18,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[13].country",
+                "excerpt": "Denmark"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07764978",
+            "url": "https://clinicaltrials.gov/study/NCT07764978",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07764978",
+            "brief_title": "Study of AZD0120 in Newly Diagnosed Multiple Myeloma Ineligible for ASCT",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[62].country",
+                "excerpt": "Denmark"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Newly Diagnosed Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT06980480",
+            "url": "https://clinicaltrials.gov/study/NCT06980480",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT06980480",
+            "brief_title": "A Study of Gammagard Liquid (Immune Globulin Infusion, 10%) to Prevent Infections in Adults With Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[25].country",
+                "excerpt": "Denmark"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "country": "Czechia",
+        "trial_count": 17,
+        "citation_count": 17,
+        "citations": [
+          {
+            "nct_id": "NCT04910568",
+            "url": "https://clinicaltrials.gov/study/NCT04910568",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT04910568",
+            "brief_title": "A Study Evaluating the Safety, Pharmacokinetics, and Activity of Cevostamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[11].country",
+                "excerpt": "Czechia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT07518186",
+            "url": "https://clinicaltrials.gov/study/NCT07518186",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT07518186",
+            "brief_title": "A Study Comparing JNJ-79635322 and Teclistamab in Participants With Relapsed or Refractory Multiple Myeloma",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[78].country",
+                "excerpt": "Czechia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Multiple Myeloma"
+              }
+            ]
+          },
+          {
+            "nct_id": "NCT05519085",
+            "url": "https://clinicaltrials.gov/study/NCT05519085",
+            "api_url": "https://clinicaltrials.gov/api/v2/studies/NCT05519085",
+            "brief_title": "A Study to Evaluate Mezigdomide, Bortezomib and Dexamethasone (MEZIVd) Versus Pomalidomide, Bortezomib and Dexamethasone (PVd) in Participants With Relapsed or Refractory Multiple Myeloma (RRMM)",
+            "evidence": [
+              {
+                "path": "protocolSection.contactsLocationsModule.locations[129].country",
+                "excerpt": "Czechia"
+              }
+            ],
+            "match_evidence": [
+              {
+                "path": "protocolSection.conditionsModule.conditions[0]",
+                "excerpt": "Relapsed or Refractory Multiple Myeloma"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "query": "Which countries have the most recruiting trials for multiple myeloma?",
+    "interpretation": "Count of recruiting trials for multiple myeloma by country.",
+    "visualization_rationale": "Counting trials per country category is a categorical distribution, best read as bars.",
+    "plan": {
+      "interpretation": "Count of recruiting trials for multiple myeloma by country.",
+      "analysis": "distribution",
+      "dimension": "country",
+      "filters": {
+        "condition": "multiple myeloma",
+        "phases": [],
+        "statuses": [
+          "RECRUITING"
+        ],
+        "intervention_types": [],
+        "sponsor_classes": []
+      },
+      "groups": [],
+      "metric": "count",
+      "top_n": 20,
+      "chart_preference": "auto",
+      "assumptions": [
+        "Recruiting trials are those with status RECRUITING."
+      ]
+    },
+    "planner": {
+      "mode": "llm",
+      "model": "gpt-4.1-mini",
+      "attempts": 1
+    },
+    "filters_applied": {
+      "condition": "multiple myeloma",
+      "phases": [],
+      "statuses": [
+        "RECRUITING"
+      ],
+      "intervention_types": [],
+      "sponsor_classes": []
+    },
+    "groups": [],
+    "counting_rule": "Each trial is counted at most once per category. 'Country' is multi-valued (a trial can list several), so a trial may appear in several categories and category totals can exceed the number of trials.",
+    "rendering": {
+      "orientation": "horizontal",
+      "sort": "descending by trial count (across all groups)",
+      "units": {
+        "trial_count": "trials"
+      },
+      "value_field": "trial_count",
+      "categories_total": 54,
+      "categories_shown": 20
+    },
+    "data_completeness": {
+      "total_matching": 583,
+      "records_analyzed": 583,
+      "complete": true
+    },
+    "citations": {
+      "mode": "summary",
+      "max_per_datum": 3,
+      "excerpt_semantics": "evidence[].excerpt is the exact value at evidence[].path in the API v2 record (derived=true marks values the datum is computed from, e.g. a location count)."
+    },
+    "api_requests": [
+      {
+        "url": "https://clinicaltrials.gov/api/v2/studies?query.cond=multiple+myeloma&filter.overallStatus=RECRUITING&fields=IdentificationModule%2CStatusModule%2CSponsorCollaboratorsModule%2CConditionsModule%2CDesignModule%2CArmsInterventionsModule%2CEligibilityModule%2CContactsLocationsModule%2CHasResults&format=json&countTotal=true&pageSize=1000",
+        "total_count": 583,
+        "retrieved": 583,
+        "pages": 1,
+        "from_cache": true,
+        "fallbacks": []
+      }
+    ],
+    "assumptions": [
+      "Recruiting trials are those with status RECRUITING."
+    ],
+    "warnings": [],
+    "source": {
+      "name": "ClinicalTrials.gov",
+      "api": "https://clinicaltrials.gov/api/v2",
+      "api_version": "2.0.5",
+      "data_timestamp": "2026-10-23T09:00:04",
+      "retrieved_at": "2026-10-26T07:43:33+00:00"
+    },
+    "timing_ms": {
+      "plan": 1556,
+      "fetch": 117,
+      "aggregate": 34,
+      "total": 1708
+    }
+  }
+}

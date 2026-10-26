@@ -1,0 +1,7 @@
+{
+  "query": "Show a network of sponsors and drugs for glioblastoma trials",
+  "trial_phase": [
+    "Phase 2",
+    "Phase 3"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "query": "Breakdown of Alzheimer's disease trials by phase and status",
+  "visualization_type": "stacked_bar_chart",
+  "max_records": 10000
+}

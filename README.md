@@ -20,8 +20,8 @@ raw study records ──► deterministic counting with evidence ──► group
 - **One coherent pipeline**: every question is a typed `QueryPlan`; no per-question code paths.
 - **LLM never touches the numbers**: it only fills a constrained plan; counts come from deterministic code.
 - **Deep citations** with JSON paths + exact excerpts, independently auditable against the live API.
-- **Small demo UI** (`/`) that renders any response using only the documented schema; click a datum to see its citations.
-- **156 automated tests** (fixture-backed API, fake LLM, headless-browser UI tests) plus opt-in live tests.
+- **Small demo UI** (`/`) that renders any response using only the documented schema; click a datum to see its citations. [Demo video](docs/demo.mp4) · [screenshots](#10-demo).
+- **160 automated tests** (fixture-backed API, fake LLM, headless-browser UI tests) plus opt-in live tests.
 
 ---
 
@@ -63,7 +63,7 @@ uvicorn app.main:app --reload --port 8000
 | `OPENAI_API_KEY` | – | Enables the LLM planner |
 | `OPENAI_MODEL` | `gpt-4.1-mini` | Any allowed model (`gpt-4o-2024-08-06`, `gpt-4.1`, `gpt-5-mini`, …) |
 | `PLANNER` | `auto` | `auto` (LLM if key, else rules) · `llm` · `rules` |
-| `MAX_RECORDS` | `1000` | Records fetched per dataset (request can raise to 10 000) |
+| `MAX_RECORDS` | `5000` | Records fetched per dataset (≈5 s; a request can raise it to 10 000) |
 | `CTGOV_CACHE_DIR` | – | Optional on-disk cache of API responses (reproducible demos) |
 | `CTGOV_BASE_URL` | `https://clinicaltrials.gov/api/v2` | |
 
@@ -91,7 +91,7 @@ python -m app.cli "Show a network of sponsors and drugs" --condition glioblastom
 **Tests**
 
 ```bash
-pytest                       # 156 offline tests (fake ClinicalTrials.gov + fake LLM + headless UI)
+pytest                       # 160 offline tests (fake ClinicalTrials.gov + fake LLM + headless UI)
 pytest -m live               # opt-in: real ClinicalTrials.gov (and OpenAI if configured)
 python scripts/run_examples.py   # regenerate examples/ from live data, with independent citation audits
 ruff check .
@@ -128,7 +128,7 @@ app/
 ├── audit.py             citation auditor (used by tests and by the live example runner)
 └── cli.py
 web/                     demo UI (vanilla JS; Vega-Lite + vis-network vendored)
-tests/                   156 offline + 5 live tests; fixtures/factory.py builds API-v2-shaped synthetic records
+tests/                   160 offline + 5 live tests; fixtures/factory.py builds API-v2-shaped synthetic records
 scripts/run_examples.py  live example generator + independent citation audit
 docs/SCHEMA.md           full request/response contract
 examples/                example requests, responses and audits
@@ -252,7 +252,7 @@ sample of cited trials one by one from `/api/v2/studies/{nct_id}` (no cache, ful
 | Decision | Why | Trade-off |
 |---|---|---|
 | **Plan DSL instead of free-form agent / code generation.** The LLM emits a `QueryPlan` (analysis, dimensions, filters, groups) from closed vocabularies. | One coherent path covers all question classes; plans are inspectable (`/v1/plan`), testable and reproducible; no generated code to execute. | Questions outside the DSL (e.g. outcome measures, eligibility text mining) are answered with the nearest supported analysis or not at all. Extending = add a dimension extractor or a builder. |
-| **Numbers computed locally from raw records, not by the LLM and not by separate count queries.** | Makes deep citations possible (we know *which* trials made each number) and keeps all datums consistent with each other. | For very large result sets the analysis covers the first `max_records` records (default 1000, up to 10 000); this is always flagged in `data_completeness` + warnings. KPIs use the API's exact `countTotal`. |
+| **Numbers computed locally from raw records, not by the LLM and not by separate count queries.** | Makes deep citations possible (we know *which* trials made each number) and keeps all datums consistent with each other. | For very large result sets the analysis covers the first `max_records` records (default 5000, up to 10 000); this is always flagged in `data_completeness` + warnings. KPIs use the API's exact `countTotal`. |
 | **Use the API's search areas for text filters** (`query.cond`, `query.intr`, `query.spons`, `query.locn`, `query.term`). | The API expands synonyms/MeSH (NSCLC, MK-3475 → pembrolizumab), which a local matcher cannot. | Text matching is trusted to the API; we can only show literal `match_evidence` where it exists. |
 | **Enum/range filters sent to the API *and* re-verified locally.** | A malformed or ignored server-side filter can never leak wrong trials into a chart. If the API rejects the Essie expression, the client retries without it and the filter is applied locally. | Slight redundancy; with the fallback the reported total becomes an upper bound (flagged). |
 | **Counting rule: distinct trials per bucket.** A trial with 40 US sites counts once for the US. Multi-valued fields (countries, conditions, drugs) can put a trial in several buckets — stated in `meta.counting_rule`. | Matches how people read "trials per country". | Totals across buckets can exceed the number of trials (explicitly documented). |
@@ -318,10 +318,12 @@ list can be configured (`gpt-5*` models are called without `temperature`, which 
   flags, zero-result recovery, server-side filter rejection, empty results.
 - **Headless-browser tests** (Playwright/Chromium) render every visualization type in the demo UI with no
   JavaScript errors and check that clicking a datum shows its citations.
-- **Live validation** (`pytest -m live`, `scripts/run_examples.py`): checks that the real API accepts the field
-  projection and Essie filters without fallbacks, that enum filters hold on every returned record, and that cited
-  trials **re-fetched independently** from `/api/v2/studies/{nct_id}` match every excerpt (results in
-  `examples/*.audit.json`).
+- **Live validation** (`pytest -m live`, 5/5 passing against API v2.0.5): the real API accepts the field
+  projection and Essie filters with **no fallbacks**, enum filters hold on every returned record, and cited
+  trials **re-fetched independently** from `/api/v2/studies/{nct_id}` match every excerpt.
+- **Example-run audits** (`scripts/run_examples.py`): across the 7 examples, **261 citations / 608 evidence
+  excerpts** were re-fetched one trial at a time (full record, no cache) and **all matched** (`examples/*.audit.json`).
+- **Reviewing real outputs** found issues the fixtures could not (see the iteration log, items 10–15).
 - `ruff` clean.
 
 ---
@@ -332,15 +334,22 @@ Real outputs from the live API are in **[examples/](examples/)**: for each query
 response, and an independent citation audit. Index and summary: [examples/README.md](examples/README.md).
 Regenerate with `python scripts/run_examples.py`.
 
-| # | Query | Visualization |
-|---|---|---|
-| 1 | "How has the number of trials for this drug changed over time?" + `drug_name: Pembrolizumab` (the brief's example) | `time_series` |
-| 2 | "Compare phases for trials involving nivolumab vs pembrolizumab" | `grouped_bar_chart` |
-| 3 | "Which countries have the most recruiting trials for multiple myeloma?" | `bar_chart` |
-| 4 | "Show a network of sponsors and drugs for glioblastoma trials" + `trial_phase: [2, 3]` | `network_graph` (bipartite) |
-| 5 | "Which drugs frequently co-occur in combination studies for pancreatic cancer?" | `network_graph` (co-occurrence) |
-| 6 | "What is the distribution of enrollment sizes for phase 3 type 2 diabetes trials?" | `histogram` |
-| 7 | "Breakdown of Alzheimer's disease trials by phase and status" | `stacked_bar_chart` |
+All seven were planned by the LLM (`gpt-4.1-mini`, first attempt), analysed **every** matching trial
+(`data_completeness.complete = true`), and passed the independent citation audit. Data snapshot: API 2.0.5,
+`dataTimestamp` 2026-10-23.
+
+| # | Request | Visualization | Trials analysed | Headline result | Time |
+|---|---|---|---|---|---|
+| 1 | "How has the number of trials for this drug changed over time?" + `drug_name: Pembrolizumab` (the brief's example) | `time_series` | 2,993 | rises from 1 trial (2008) to a peak of 299 starts in 2022; 2027 flagged `is_projected` | 2.7 s |
+| 2 | "Compare phases for trials involving nivolumab vs pembrolizumab" | `grouped_bar_chart` | 2,036 + 2,993 | Phase 2 dominates both (817 vs 1,269 trials) | 4.7 s |
+| 3 | "Which countries have the most recruiting trials for multiple myeloma?" | `bar_chart` | 583 | United States 278, China 164, France 67 | 1.7 s |
+| 4 | "Show a network of sponsors and drugs for glioblastoma trials" + `trial_phase: [2, 3]` | `network_graph` (bipartite) | 1,072 | strongest link NCI ↔ temozolomide (17 trials); 29 nodes / 61 edges | 2.2 s |
+| 5 | "Which drugs frequently co-occur in combination studies for pancreatic cancer?" + `max_records: 10000` | `network_graph` (co-occurrence) | 5,109 | gemcitabine ↔ nab-paclitaxel in 261 trials; 28 nodes / 136 edges | 5.1 s |
+| 6 | "What is the distribution of enrollment sizes for phase 3 type 2 diabetes trials?" | `histogram` | 1,646 | mode 0–99 participants (368 trials); 78 trials ≥ 2,100 in the overflow bin | 3.8 s |
+| 7 | "Breakdown of Alzheimer's disease trials by phase and status" + `visualization_type: stacked_bar_chart`, `max_records: 10000` | `stacked_bar_chart` | 4,286 | largest cell: *Not Applicable × Completed* (818 trials); Phase 2 × Completed 349 | 3.4 s |
+
+Each response's `meta` also shows the plan, the exact API URLs, warnings (e.g. example 5 reports that the
+LLM's `intervention='combination studies'` filter was dropped as a generic word) and the assumptions made.
 
 ---
 
@@ -352,6 +361,15 @@ Vega-Lite, networks with vis-network, tables and KPI cards in plain HTML. **Clic
 citations (NCT links, API record links, evidence paths and excerpts). Other tabs show how the question was
 answered (plan, planner, counting rule, completeness, exact API URLs, data snapshot) and the raw JSON.
 
+**Demo video** (60 s, real data): [docs/demo.mp4](docs/demo.mp4): a comparison question → grouped bars →
+click a bar for its citations → "How it was answered" → JSON → a time series → a sponsor–drug network → a world map.
+
+| | |
+|---|---|
+| ![time series with citations](docs/screenshots/01_time_series.png) | ![grouped bars with citations](docs/screenshots/02_grouped_bar.png) |
+| ![drug co-occurrence network](docs/screenshots/03_network.png) | ![sponsor-drug network](docs/screenshots/05_sponsor_drug_network.png) |
+| ![histogram with citations](docs/screenshots/06_histogram.png) | ![choropleth map](docs/screenshots/04_map.png) |
+
 The renderer (`web/renderers.js`) uses only the documented schema — it is effectively the reference
 implementation of [docs/SCHEMA.md](docs/SCHEMA.md). Libraries are vendored (`web/vendor/`), so the demo works
 without CDN access.
@@ -360,12 +378,13 @@ without CDN access.
 
 ## 11. Limitations & what I would improve
 
-- **Sampling for very large result sets.** Aggregates cover up to `max_records` per dataset (default 1000,
+- **Sampling for very large result sets.** Aggregates cover up to `max_records` per dataset (default 5000,
   max 10 000) in API relevance order; flagged in `data_completeness`. Improvement: for single-valued
   dimensions (phase, status, start year) compute exact counts with per-bucket `countTotal` queries and keep the
   sampled records for citations; or stream all pages with a background job.
-- **Entity normalisation.** Drug names are normalised lexically; synonyms/codes (MK-3475 vs pembrolizumab) are not
-  merged, and sponsor names are not de-duplicated across subsidiaries. Improvement: map interventions to
+- **Entity normalisation.** Drug names are normalised lexically (dose/route/salt forms, hyphenation); true synonyms and
+  codes are not merged: in the live examples *Fluorouracil* / *5-Fluorouracil* / *5-FU*, *Temozolomide* / *TMZ* and
+  *Nab-paclitaxel* / *Abraxane* remain separate nodes, and sponsor names are not de-duplicated across subsidiaries. Improvement: map interventions to
   RxNorm/MeSH (the API's `derivedSection.interventionBrowseModule` is a start) and sponsors to a canonical list.
 - **Investigator networks** use `overallOfficials` (site-level investigators are rarely published in the API).
 - **Rules planner** is intentionally simple (keyword lexicon + residual-term search); it is a fallback, not a
@@ -419,9 +438,29 @@ generated, then corrected where tests or review found problems.
 9. UI polish found from screenshots: repeated integer ticks on small counts, vertical labels for short
    categories, Vega-internal fields shown in the citation header.
 
+*Found by running against the live API and the real LLM, then reading the outputs:*
+
+10. The LLM read "combination studies" as `intervention="combination"` + `intervention_types=[COMBINATION_PRODUCT]`.
+    Grounding let it through because "combination" is in the question and any drug word cued all intervention
+    types → per-type cues, a generic-word blocklist for filter values, and a prompt rule (regression test uses the
+    exact live plan).
+11. The LLM copied `trial_phase` from the structured fields into its plan, and grounding reported a misleading
+    "dropped phases" warning → values supplied by structured fields count as grounded.
+12. Drug networks split *Gemcitabine* / *Gemcitabine hydrochloride* and *Nab-paclitaxel* / *nab paclitaxel* → salt
+    forms stripped and hyphen/space treated as equivalent in keys.
+13. An explicit `stacked_bar_chart` request became a heatmap (> 8 statuses) → explicit preferences now beat the heuristic.
+14. With the original 1,000-record default most examples analysed only a relevance-ordered subset. Measured a full
+    6,504-record fetch at ~7 s, so the default became 5,000 (examples needing more set `max_records`).
+15. The time-series line plunged into the projected (future) year → projected periods are drawn as faded points only.
+
+The live run also surfaced an environment problem rather than a code one: the container's `OPENAI_API_KEY`
+variable was mistyped, so the first run fell back to the rules planner, and the response said so in
+`meta.planner.fallback_reason`.
+
 ---
 
 ## 13. Project layout
 
 See [§2](#2-architecture). Supporting files: `requirements*.txt`, `pyproject.toml` (pytest/ruff config),
-`.env.example`, `Dockerfile`, `docs/SCHEMA.md`, `examples/`, `web/vendor/README.md` (vendored library licenses).
+`.env.example`, `Dockerfile`, `docs/SCHEMA.md`, `docs/demo.mp4`, `docs/screenshots/`, `examples/`,
+`web/vendor/README.md` (vendored library licenses).

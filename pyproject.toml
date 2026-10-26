@@ -1,0 +1,19 @@
+[project]
+name = "ctgov-viz-agent"
+version = "1.0.0"
+description = "ClinicalTrials.gov query-to-visualization agent (backend + demo UI)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["live: hits the real ClinicalTrials.gov / OpenAI APIs (run with -m live)"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]  # long lines are mostly descriptive strings; formatting is not enforced

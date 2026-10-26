@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trials Viz Agent</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- vendored (web/vendor/README.md) so the demo works offline / behind restrictive proxies -->
+  <script src="/static/vendor/vega.min.js"></script>
+  <script src="/static/vendor/vega-lite.min.js"></script>
+  <script src="/static/vendor/vega-embed.min.js"></script>
+  <script src="/static/vendor/vis-network.min.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>ClinicalTrials.gov → Visualization</h1>
+      <p class="muted">Ask a question about clinical trials. Every number is computed from ClinicalTrials.gov API v2 records; click any bar, point, node or edge to see the trials and exact fields behind it.</p>
+    </div>
+    <span id="health" class="badge"></span>
+  </header>
+
+  <main>
+    <section class="card">
+      <form id="form">
+        <div class="row">
+          <input id="query" name="query" type="text" required minlength="3"
+                 placeholder="e.g. Compare phases for trials involving nivolumab vs pembrolizumab" />
+          <button type="submit" id="run">Visualize</button>
+        </div>
+        <div id="examples" class="chips" aria-label="Example questions"></div>
+        <details>
+          <summary>Optional structured fields (override what is inferred from the question)</summary>
+          <div class="grid">
+            <label>Drug / intervention <input name="drug_name" /></label>
+            <label>Condition <input name="condition" /></label>
+            <label>Sponsor <input name="sponsor" /></label>
+            <label>Country <input name="country" /></label>
+            <label>Phases <input name="trial_phase" placeholder="Phase 2, Phase 3" /></label>
+            <label>Status <input name="overall_status" placeholder="RECRUITING" /></label>
+            <label>Start year ≥ <input name="start_year" type="number" min="1900" max="2100" /></label>
+            <label>Start year ≤ <input name="end_year" type="number" min="1900" max="2100" /></label>
+            <label>Compare field
+              <select name="compare_field">
+                <option value="">—</option><option>drug</option><option>condition</option>
+                <option>sponsor</option><option>country</option><option>term</option>
+              </select>
+            </label>
+            <label>Compare values <input name="compare_values" placeholder="nivolumab, pembrolizumab" /></label>
+            <label>Chart type
+              <select name="visualization_type">
+                <option value="">auto</option><option>bar_chart</option><option>grouped_bar_chart</option>
+                <option>stacked_bar_chart</option><option>heatmap</option><option>time_series</option>
+                <option>histogram</option><option>scatter_plot</option><option>network_graph</option>
+                <option>choropleth_map</option><option>table</option><option>kpi</option>
+              </select>
+            </label>
+            <label>Max records <input name="max_records" type="number" min="1" max="10000" placeholder="1000" /></label>
+            <label>Citations
+              <select name="citation_mode"><option>summary</option><option>full</option><option>off</option></select>
+            </label>
+            <label>Planner
+              <select name="planner"><option>auto</option><option>llm</option><option>rules</option></select>
+            </label>
+          </div>
+        </details>
+      </form>
+    </section>
+
+    <section id="status" class="status" hidden></section>
+
+    <section id="result" class="layout" hidden>
+      <div class="card main-col">
+        <div class="vis-head">
+          <div>
+            <h2 id="vis-title"></h2>
+            <p id="vis-subtitle" class="muted"></p>
+          </div>
+          <div class="tabs" role="tablist">
+            <button role="tab" data-tab="chart" class="active">Chart</button>
+            <button role="tab" data-tab="details">How it was answered</button>
+            <button role="tab" data-tab="json">JSON</button>
+          </div>
+        </div>
+        <div data-pane="chart">
+          <div id="chart"></div>
+          <ul id="warnings" class="warnings"></ul>
+        </div>
+        <div data-pane="details" hidden>
+          <dl id="details" class="details"></dl>
+        </div>
+        <div data-pane="json" hidden>
+          <pre id="json"></pre>
+        </div>
+      </div>
+      <aside class="card side-col">
+        <h3>Citations</h3>
+        <div id="citations" class="muted">Click a bar, point, cell, node or edge to see the trial records that support it.</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="muted">Data: <a href="https://clinicaltrials.gov/data-api/api" target="_blank" rel="noopener">ClinicalTrials.gov Data API v2</a>. Schema: <a href="/v1/schema">/v1/schema</a> · API docs: <a href="/docs">/docs</a></footer>
+
+  <script src="/static/renderers.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

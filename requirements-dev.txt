@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest>=8
+pytest-asyncio>=0.23
+ruff>=0.4
+# optional: headless UI tests (tests/test_ui_render.py); then `python -m playwright install chromium`
+playwright>=1.40

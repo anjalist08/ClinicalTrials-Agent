@@ -438,11 +438,14 @@ def _walk_strings(study: dict[str, Any], path: str, attr: str | None) -> Iterabl
 def match_evidence(study: dict[str, Any], text_filters: dict[str, str]) -> list[Ev]:
     """Where each text filter literally occurs in the record (first hit per filter)."""
     found: list[Ev] = []
-    for fname, needle in text_filters.items():
-        n = needle.lower()
-        for path, attr in _MATCH_PATHS.get(fname, []):
-            hit = next((Ev(p, s) for p, s in _walk_strings(study, path, attr) if n in s.lower()), None)
-            if hit:
-                found.append(hit)
-                break
+    for fname, expr in text_filters.items():
+        # each operand of a boolean search expression ("A AND (B C)") is matched separately
+        for needle in re.split(r"\s+(?:AND|OR)\s+", expr):
+            n = needle.strip("() ").lower()
+            for path, attr in _MATCH_PATHS.get(fname, []):
+                hit = next((Ev(p, s) for p, s in _walk_strings(study, path, attr) if n and n in s.lower()), None)
+                if hit:
+                    if hit not in found:
+                        found.append(hit)
+                    break
     return found

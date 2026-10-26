@@ -21,7 +21,7 @@ raw study records ──► deterministic counting with evidence ──► group
 - **LLM never touches the numbers**: it only fills a constrained plan; counts come from deterministic code.
 - **Deep citations** with JSON paths + exact excerpts, independently auditable against the live API.
 - **Small demo UI** (`/`) that renders any response using only the documented schema; click a datum to see its citations.
-- **153 automated tests** (fixture-backed API, fake LLM, headless-browser UI tests) plus opt-in live tests.
+- **156 automated tests** (fixture-backed API, fake LLM, headless-browser UI tests) plus opt-in live tests.
 
 ---
 
@@ -91,7 +91,7 @@ python -m app.cli "Show a network of sponsors and drugs" --condition glioblastom
 **Tests**
 
 ```bash
-pytest                       # 153 offline tests (fake ClinicalTrials.gov + fake LLM + headless UI)
+pytest                       # 156 offline tests (fake ClinicalTrials.gov + fake LLM + headless UI)
 pytest -m live               # opt-in: real ClinicalTrials.gov (and OpenAI if configured)
 python scripts/run_examples.py   # regenerate examples/ from live data, with independent citation audits
 ruff check .
@@ -128,7 +128,7 @@ app/
 ├── audit.py             citation auditor (used by tests and by the live example runner)
 └── cli.py
 web/                     demo UI (vanilla JS; Vega-Lite + vis-network vendored)
-tests/                   153 offline + 5 live tests; fixtures/factory.py builds API-v2-shaped synthetic records
+tests/                   156 offline + 5 live tests; fixtures/factory.py builds API-v2-shaped synthetic records
 scripts/run_examples.py  live example generator + independent citation audit
 docs/SCHEMA.md           full request/response contract
 examples/                example requests, responses and audits
@@ -413,7 +413,10 @@ generated, then corrected where tests or review found problems.
    semantics, so the test was fixed and the semantics documented.
 7. Demo UI: the network renderer's parameter named `vis` shadowed the vis-network global, so networks never
    rendered — caught by the headless-browser test.
-8. UI polish found from screenshots: repeated integer ticks on small counts, vertical labels for short
+8. Self-review: the rules planner joins several search terms as `A AND (B C)`, which the grounding check then
+   rejected (the literal "and" is not in the question) and `match_evidence` never matched → both now treat
+   each boolean operand separately (regression tests added).
+9. UI polish found from screenshots: repeated integer ticks on small counts, vertical labels for short
    categories, Vega-internal fields shown in the citation header.
 
 ---

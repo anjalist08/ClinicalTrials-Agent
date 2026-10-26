@@ -1,13 +1,13 @@
 """Visualization builder: less common analysis/option combinations, built directly from plans."""
 
 import pytest
+from fixtures.factory import corpus
 
 from app.analytics.citations import CitationFactory
 from app.audit import audit
 from app.ctgov import extract as ex
 from app.schemas.plan import Filters, Group, QueryPlan
 from app.viz.builder import Dataset, build
-from fixtures.factory import corpus
 
 
 def run(plan: QueryPlan, groups: dict | None = None, mode="summary"):

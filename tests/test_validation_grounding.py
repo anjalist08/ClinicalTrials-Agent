@@ -56,6 +56,20 @@ def test_is_grounded_exact_token_and_fuzzy():
     assert not is_grounded("Keytruda", ["trials for pembrolizumab"])
 
 
+def test_boolean_terms_grounded_per_operand():
+    q = ["How has pembrolizumab use in lung cancer trials changed per year?"]
+    assert is_grounded("pembrolizumab AND (lung cancer)", q)
+    assert not is_grounded("pembrolizumab AND (breast cancer)", q)
+
+
+def test_rules_plan_with_two_terms_survives_grounding():
+    from app.planner.rules import plan_with_rules
+
+    req = QueryRequest(query="How has pembrolizumab use in lung cancer trials changed per year?")
+    plan, warnings = ground_plan(plan_with_rules(req.query, 2026), req)
+    assert plan.filters.term == "pembrolizumab AND (lung cancer)" and not warnings
+
+
 def test_grounding_drops_hallucinated_filters():
     req = QueryRequest(query="How are pembrolizumab trials distributed across sponsors?")
     hallucinated = P(

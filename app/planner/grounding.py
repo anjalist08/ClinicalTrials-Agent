@@ -48,6 +48,10 @@ def _norm(s: str) -> str:
 
 
 def is_grounded(value: str, sources: list[str]) -> bool:
+    # boolean search expressions ("A AND (B C)") are grounded when every operand is
+    parts = [p.strip("() ") for p in re.split(r"\s+(?:AND|OR)\s+", value)]
+    if len(parts) > 1:
+        return all(is_grounded(p, sources) for p in parts if p)
     v = _norm(value)
     if not v:
         return False

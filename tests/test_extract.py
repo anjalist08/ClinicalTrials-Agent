@@ -86,6 +86,14 @@ def test_match_evidence_finds_literal_occurrences_including_other_names():
     assert ex.match_evidence(s, {"intervention": "nivolumab"}) == []
 
 
+def test_match_evidence_splits_boolean_terms():
+    s = by_id()["NCT90000001"]
+    ev = ex.match_evidence(s, {"term": "pembrolizumab AND (advanced melanoma)"})
+    assert [e.excerpt for e in ev] == ["Pembrolizumab in Advanced Melanoma"]  # both operands hit the title once
+    ev = ex.match_evidence(s, {"term": "keytruda AND melanoma"})
+    assert [e.path.rsplit(".", 1)[-1] for e in ev] == ["briefTitle"]  # keytruda only in otherNames (not a term path)
+
+
 def test_investigator_names_strip_degrees():
     vals = ex.DIMENSIONS["investigator"].extract(by_id()["NCT90000001"])
     assert vals[0].label == "Jane Doe" and vals[0].evidence[0].excerpt == "Jane Doe, MD"

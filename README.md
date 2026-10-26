@@ -5,7 +5,7 @@ visualization specifications** computed from the [ClinicalTrials.gov Data API v2
 Every value is backed by **deep citations**: the NCT ID, its links and the exact field/value in the API
 record behind each bar, point, cell, node and edge.
 
-**▶ Demo video: (Click to view on YouTube) ** [![Watch the demo on YouTube](https://img.youtube.com/vi/gg0WtXR8Cd8/hqdefault.jpg)](https://youtu.be/gg0WtXR8Cd8)
+**▶ Demo video: (Click to view on YouTube)** [![Watch the demo on YouTube](https://img.youtube.com/vi/gg0WtXR8Cd8/hqdefault.jpg)](https://youtu.be/gg0WtXR8Cd8)
 
 ```
 "Compare phases for trials involving nivolumab vs pembrolizumab"

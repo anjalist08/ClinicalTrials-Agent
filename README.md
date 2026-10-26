@@ -5,6 +5,8 @@ visualization specifications** computed from the [ClinicalTrials.gov Data API v2
 Every value is backed by **deep citations**: the NCT ID, its links and the exact field/value in the API
 record behind each bar, point, cell, node and edge.
 
+**▶ Demo video:** [![Watch the demo on YouTube](https://img.youtube.com/vi/gg0WtXR8Cd8/hqdefault.jpg)](https://youtu.be/gg0WtXR8Cd8)
+
 ```
 "Compare phases for trials involving nivolumab vs pembrolizumab"
         │
@@ -20,7 +22,7 @@ raw study records ──► deterministic counting with evidence ──► group
 - **One coherent pipeline**: every question is a typed `QueryPlan`; no per-question code paths.
 - **LLM never touches the numbers**: it only fills a constrained plan; counts come from deterministic code.
 - **Deep citations** with JSON paths + exact excerpts, independently auditable against the live API.
-- **Small demo UI** (`/`) that renders any response using only the documented schema; click a datum to see its citations. [Demo video](docs/demo.mp4) · [screenshots](#10-demo).
+- **Small demo UI** (`/`) that renders any response using only the documented schema; click a datum to see its citations. [Demo video (YouTube)](https://youtu.be/gg0WtXR8Cd8) · [screenshots](#10-demo).
 - **160 automated tests** (fixture-backed API, fake LLM, headless-browser UI tests) plus opt-in live tests.
 
 ---
@@ -361,8 +363,12 @@ Vega-Lite, networks with vis-network, tables and KPI cards in plain HTML. **Clic
 citations (NCT links, API record links, evidence paths and excerpts). Other tabs show how the question was
 answered (plan, planner, counting rule, completeness, exact API URLs, data snapshot) and the raw JSON.
 
-**Demo video** (60 s, real data): [docs/demo.mp4](docs/demo.mp4): a comparison question → grouped bars →
-click a bar for its citations → "How it was answered" → JSON → a time series → a sponsor–drug network → a world map.
+**Demo video** (real data), on YouTube: <https://youtu.be/gg0WtXR8Cd8>
+
+[![ClinicalTrials.gov query-to-visualization demo](https://img.youtube.com/vi/gg0WtXR8Cd8/hqdefault.jpg)](https://youtu.be/gg0WtXR8Cd8)
+
+A recording of the UI is also in the repo at [docs/demo.mp4](docs/demo.mp4) (60 s: a comparison question → grouped
+bars → click a bar for its citations → "How it was answered" → JSON → a time series → a sponsor–drug network → a world map).
 
 | | |
 |---|---|
@@ -401,13 +407,23 @@ without CDN access.
 
 ## 12. Tools used, and what was designed vs generated
 
-**Tools**: Python 3, FastAPI, httpx (async), Pydantic v2, OpenAI Python SDK (Structured Outputs),
-pycountry, pytest / pytest-asyncio, Playwright (headless Chromium) for UI tests, ruff; Vega-Lite and
-vis-network in the demo UI. **AI assistance**: the code, tests and docs were produced with
-**Claude Code** (Anthropic's AI coding agent) working from the assignment brief, then reviewed, run and
-iterated on with the test-suite.
+**Tools**: Python 3, FastAPI, httpx (async), Pydantic v2, OpenAI Python SDK (Structured Outputs,
+`gpt-4.1-mini`), pycountry, pytest / pytest-asyncio, Playwright (headless Chromium) for UI tests, ruff;
+Vega-Lite and vis-network in the demo UI; **Claude Code** (Anthropic's AI coding agent) as the implementation tool.
 
-**Designed deliberately** (decisions made up-front and enforced by tests, rather than accepted from generated code):
+**My role.** I used Claude Code as the implementation agent and directed the work:
+- **Scoping:** I set the scope from the brief: every required task plus all bonus and optional parts
+  (deep citations to source records, a demo, and the README sections on tools, validation and design).
+- **Constraints:** I supplied the OpenAI access and the list of allowed models.
+- **Environment:** I set up the build environment (network access to ClinicalTrials.gov and OpenAI, GitHub access).
+- **Validation:** I required live-data validation before submission. The example runs, the independent citation
+  audits and the fixes in items 10–15 below came out of that step.
+- **Review and release:** I reviewed the outputs, published the demo video and chose what to submit.
+
+Most of the code, tests and documentation were written by Claude Code under this direction, then run, reviewed
+and iterated on against the test suite and the live API.
+
+**Design decisions** (reasoned about explicitly and enforced by tests, rather than accepted as first generated):
 - the plan-DSL architecture and the rule that the LLM never produces data;
 - the evidence-carrying extractor design that makes citations exact and auditable, and the auditor itself;
 - grounding rules for LLM output, the validation/repair/fallback chain, and "structured fields win";
@@ -418,8 +434,8 @@ iterated on with the test-suite.
 - the test strategy: API-shaped fixtures, a fake API with failure injection, a fake LLM, headless-browser
   tests, and live independent re-fetch audits.
 
-**Generated and adapted**: most implementation code, the fixture corpus, the CSS, and first drafts of the docs were
-generated, then corrected where tests or review found problems.
+**Generated and adapted**: most implementation code, the fixture corpus, the CSS and the first drafts of the docs
+were AI-generated, then corrected where tests, live runs or review found problems (log below).
 
 **Iteration log — real issues found by the tests/review and fixed during development**:
 1. Rules planner: `nations?` matched inside "combi**nation**", turning a drug–drug network into drug–country;
